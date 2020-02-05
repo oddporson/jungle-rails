@@ -4,6 +4,7 @@
     <h1>My Cart</h1>
   </header>
 
+  <%# if there is more than 1 item in cart, then render the below table. %>
   <% if (enhanced_cart.length >= 1)  %>
 
   <div class="panel panel-default items">
@@ -51,6 +52,7 @@
     </div>
   </div>
 
+  <%# Otherwise, show that the cart is empty and not display the cart and have a button to direct customers back to continue shopping %>
   <% else %>
   <h2>Your cart is empty!</h2>
   <%= link_to "Continue Shopping", root_url, class: 'btn btn-lg btn-primary' %>
