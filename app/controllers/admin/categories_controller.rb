@@ -1,5 +1,5 @@
 class Admin::CategoriesController < ApplicationController
-  
+
   http_basic_authenticate_with name: ENV['USERNAME'], password: ENV['PASSWORD']
 
   def index
@@ -23,7 +23,7 @@ class Admin::CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:categories).permit(
+    params.require(:category).permit(
       :name,
     )
   end
