@@ -1,5 +1,14 @@
 <article class="product">
+
+  
   <header>
+    <%# Conditional statement to show sold out badge when quantity is 0 %>
+    <% if product.quantity == 0 %>
+      <aside class="badge">
+      SOLD OUT!
+      </aside>
+    <% end %>
+
     <%= link_to product do %>
       <%= image_tag product.image.thumb, alt: product.name %>
       <h4><%= product.name %></h4>
