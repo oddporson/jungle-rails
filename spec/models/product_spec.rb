@@ -13,7 +13,7 @@ RSpec.describe Product, type: :model do
     it "should have valid attribute" do
       expect(@product).to be_valid
     end
-    
+
     it 'should have the product name' do
       @product.name = nil
       @product.valid? 
@@ -37,7 +37,7 @@ RSpec.describe Product, type: :model do
       @product.valid?
       expect(@product.errors.full_messages).to_not be_empty
     end
-
     
   end
 end
+
