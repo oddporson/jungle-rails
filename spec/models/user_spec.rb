@@ -47,23 +47,23 @@ RSpec.describe User, type: :model do
 
     it 'should log the user in if email is correct' do
       @user.save
-      expect(User.authenticate_with_credentials("clarkkent@justiceleague.com", "ihatebatman")).to be_present
+      expect(User.authenticate_with_credentials("clarkkent@justiceleague.com", "ihatebatman")).to_not be_nil
     end
 
-    # it 'should not log user in if email is incorrect' do
-    #   @user.save
-    #   expect(User.authenticate_with_credentials("clarkkent@justiceleague.com", "ihatebatman")).not_to be_present
-    # end
+    it 'should not log user in if email is incorrect' do
+      @user.save
+      expect(User.authenticate_with_credentials("clarkkentisthebest@justiceleague.com", "ihatebatman")).to be_nil
+    end
 
-    # it 'should log the user in if the email contains spaces' do
-    #   @user.save
-    #   expect(User.authenticate_with_credentials("  clarkkent@justiceleague.com  ", "ihatebatman")).to be_present
-    # end
+    it 'should log the user in if the email contains spaces' do
+      @user.save
+      expect(User.authenticate_with_credentials("  clarkkent@justiceleague.com ", "ihatebatman")).to_not be_nil
+    end
 
-    # it 'should log the user in if email is typed in wrong case ' do
-    #   @user.save
-    #   expect(User.authenticate_with_credentials("CLARKkent@justiceleague.com", "ihatebatman")).to be_present
-    # end
+    it 'should log the user in if email is typed in wrong case ' do
+      @user.save
+      expect(User.authenticate_with_credentials("CLARKkent@justiceleague.com", "ihatebatman")).to_not be_nil
+    end
     
   end
 end
