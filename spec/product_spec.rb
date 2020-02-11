@@ -9,6 +9,11 @@ RSpec.describe Product, type: :model do
     end
 
     # validation tests/examples here
+
+    it "should have valid attribute" do
+      expect(@product).to be_valid
+    end
+    
     it 'should have the product name' do
       @product.name = nil
       @product.valid? 
