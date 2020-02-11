@@ -32,6 +32,13 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include ("Password confirmation doesn't match Password")
     end
 
+    it "password length should be a minimum of 5 characters" do
+      @user.password = "iha"
+      @user.password_confirmation = "iha"
+      @user.valid?
+      expect(@user.errors.full_messages).to include ("Password is too short (minimum is 5 characters)")
+    end
+
     
 
     end
