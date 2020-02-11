@@ -45,13 +45,25 @@ RSpec.describe User, type: :model do
       @user = User.new(name: "Clark Kent", email: "clarkkent@justiceleague.com", password: "ihatebatman", password_confirmation: "ihatebatman")
     end
 
-    # it "should be no spaces" do
-    #   @user.email = " hello@gmail.com "
-    #   @user.valid?
-    #   expect(@user.errors.full_messages).to include ("Email must contain no spaces")
+    it 'should log the user in if email is correct' do
+      @user.save
+      expect(User.authenticate_with_credentials("clarkkent@justiceleague.com", "ihatebatman")).to be_present
+    end
+
+    # it 'should not log user in if email is incorrect' do
+    #   @user.save
+    #   expect(User.authenticate_with_credentials("clarkkent@justiceleague.com", "ihatebatman")).not_to be_present
     # end
 
+    # it 'should log the user in if the email contains spaces' do
+    #   @user.save
+    #   expect(User.authenticate_with_credentials("  clarkkent@justiceleague.com  ", "ihatebatman")).to be_present
+    # end
+
+    # it 'should log the user in if email is typed in wrong case ' do
+    #   @user.save
+    #   expect(User.authenticate_with_credentials("CLARKkent@justiceleague.com", "ihatebatman")).to be_present
+    # end
     
-  
   end
 end
