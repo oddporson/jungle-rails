@@ -49,5 +49,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 ### Admin Products
 !["screenshot of admin products"](https://github.com/oddporson/jungle-rails/blob/master/docs/admin-products.jpg)
 
+### My Cart
+!["screenshot of cart"](https://github.com/oddporson/jungle-rails/blob/master/docs/my-cart.jpg)
+
 ### Signups
 !["screenshot of signups"](https://github.com/oddporson/jungle-rails/blob/master/docs/signup-page.jpg)
