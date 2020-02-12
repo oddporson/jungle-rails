@@ -10,7 +10,7 @@ Jungle is a mini e-commerce application built with Rails 4.2 for purposes of tea
 - Basic http authentication for admins
 - Allowed only admins to add products and categories
 
-# Testing
+## Testing
 - RSpec
 - Capybara
 - Poltergeist
