@@ -43,3 +43,12 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ### Home Page
 !["screenshot of homepage"](https://github.com/oddporson/jungle-rails/blob/master/docs/jungle-homepage.jpg)
+
+### Admin Categories
+!["screenshot of admin categories"](https://github.com/oddporson/jungle-rails/blob/master/docs/admin-categories.jpg)
+
+### Admin Products
+!["screenshot of admin products"](https://github.com/oddporson/jungle-rails/blob/master/docs/admin-products.jpg)
+
+### Signups
+!["screenshot of signups"](https://github.com/oddporson/jungle-rails/blob/master/docs/signup-page.jpg)
