@@ -28,6 +28,7 @@ RSpec.feature "Visitors navigates to product details page from homepage", type: 
       save_screenshot
 
       #VERIFY
+      # puts page.html
       expect(page).to have_css '.products-show'
     end
 
